@@ -19,12 +19,16 @@ public class QuestionController {
 
     @GetMapping("/ask")
     public Answer askQuestion(@RequestBody Question question) {
-
         return openAIService.getAnswer(question);
     }
 
     @GetMapping("/capital")
     public Answer getCapital(@RequestBody GetCapitalRequest getCapitalRequest) {
         return openAIService.getCapital(getCapitalRequest);
+    }
+
+    @GetMapping("/capitalWithInfo")
+    public Answer getCapitalWithInfo(@RequestBody GetCapitalRequest getCapitalRequest) {
+        return openAIService.getCapitalWithInfo(getCapitalRequest);
     }
 }
