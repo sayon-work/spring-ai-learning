@@ -46,7 +46,6 @@ public class OpenAIServiceImpl implements OpenAIService {
 
     @Override
     public Answer getCapital(GetCapitalRequest getCapitalRequest) {
-        //PromptTemplate promptTemplate = new PromptTemplate("What is the capital of " + getCapitalRequest.stateOrCountry() + " ?");
         PromptTemplate promptTemplate = new PromptTemplate(getCapitalPrompt);
         Prompt prompt = promptTemplate.create(Map.of("stateOrCountry",  getCapitalRequest.stateOrCountry()));
 
