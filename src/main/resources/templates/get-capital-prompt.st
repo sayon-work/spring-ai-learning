@@ -1,1 +1,1 @@
-What is the capital of {stateOrCountry}? Response in JSON format without markdown tags with name of the city in a proper named `answer`.
+What is the capital of {stateOrCountry}? {format}

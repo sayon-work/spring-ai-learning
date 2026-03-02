@@ -2,6 +2,7 @@ package ai.bharat.springaiintro.controllers;
 
 import ai.bharat.springaiintro.model.Answer;
 import ai.bharat.springaiintro.model.GetCapitalRequest;
+import ai.bharat.springaiintro.model.GetCapitalResponse;
 import ai.bharat.springaiintro.model.Question;
 import ai.bharat.springaiintro.services.OpenAIService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,7 @@ public class QuestionController {
     }
 
     @GetMapping("/capital")
-    public Answer getCapital(@RequestBody GetCapitalRequest getCapitalRequest) {
+    public GetCapitalResponse getCapital(@RequestBody GetCapitalRequest getCapitalRequest) {
         return openAIService.getCapital(getCapitalRequest);
     }
 
